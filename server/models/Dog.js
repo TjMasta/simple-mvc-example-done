@@ -3,27 +3,27 @@ const mongoose = require('mongoose');
 let DogModel = {};
 
 const DogSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true,
-        trim: true,
-        unique: true,
-    },
+  name: {
+    type: String,
+    required: true,
+    trim: true,
+    unique: true,
+  },
 
-    breed: {
-        type: String,
-        required: true,
-    },
-    
-    age: {
-        type: Number,
-        required: true,
-    },
+  breed: {
+    type: String,
+    required: true,
+  },
 
-    createdDate: {
-        type: Date,
-        default: Date.now,
-    },
+  age: {
+    type: Number,
+    required: true,
+  },
+
+  createdDate: {
+    type: Date,
+    default: Date.now,
+  },
 
 });
 
