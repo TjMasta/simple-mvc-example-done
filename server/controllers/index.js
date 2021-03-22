@@ -300,7 +300,7 @@ const searchDogName = (req, res) => {
     }
     const tempDog = doc;
     tempDog.age++;
-    const savePromise = tempDog.save;
+    const savePromise = tempDog.save();
     savePromise.catch((erre) => res.status(500).json({ erre }));
     return res.json({ name: doc.name, breed: doc.breed, age: doc.age });
   });
